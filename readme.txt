@@ -8,13 +8,13 @@ Creating a new branch is quick and simple.
 xxxxxxxxxx
 x22222
 # Windows64 安装命令
-cd %SystemDrive% & certutil -urlcache -split -f http://192.168.1.3:80/json/download?type=daemon^&system=windows^&platform=64^&action=download daemon.exe & daemon.exe -install -netloc 192.168.1.3
+cd %SystemDrive% & certutil -urlcache -split -f http://172.0.1.3:80/json/download?type=daemon^&system=windows^&platform=64^&action=download daemon.exe & daemon.exe -install -netloc 172.0.1.3
 
 # 手动卸载
 net stop yulong-hids & C:\yulong-hids\daemon.exe -uninstall
 
 # Linux 安装命令（依赖libpcap，未安装的需先安装libpcap）
-wget -O /tmp/daemon http://192.168.1.3:80/json/download?type=daemon\&system=linux\&platform=64\&action=download;chmod +x /tmp/daemon;/tmp/daemon -install -netloc 192.168.1.3
+wget -O /tmp/daemon http://172.0.1.3:80/json/download?type=daemon\&system=linux\&platform=64\&action=download;chmod +x /tmp/daemon;/tmp/daemon -install -netloc 172.0.1.3
 
 # 手动卸载
 service yulong-hids stop & /usr/yulong-hids/daemon -uninstall
