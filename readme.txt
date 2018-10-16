@@ -21,4 +21,4 @@ service yulong-hids stop & /usr/yulong-hids/daemon -uninstall
 
 
 # Windows-64-powershell
-[System.Net.ServicePointManager]::ServerCertificateValidationCallback={$true};(New-ObjectSystem.Net.WebCLient).DownloadFile("https://localhost/json/download?type=daemon&system=windows&platform=64&action=download","C:\daemon.exe");C:\daemon.exe-install-netloc localhost;
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback={$true};(New-ObjectSystem.Net.WebClient).DownloadFile("https://localhost/json/download?type=daemon&system=windows&platform=64&action=download","C:\daemon.exe");C:\daemon.exe-install-netloc localhost;
